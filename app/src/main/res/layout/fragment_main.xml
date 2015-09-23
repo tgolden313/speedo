@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="bottom"
+    android:paddingBottom="2dip"
+    android:paddingLeft="2dip"
+    android:paddingRight="2dip"
+    android:paddingTop="2dip"
+    tools:context="com.speedo.MainActivity$PlaceholderFragment" >
+
+    <LinearLayout
+    	android:layout_width="match_parent" 
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal">
+
+        <LinearLayout
+		    android:layout_height="match_parent"
+	        android:layout_width="0dip"
+	        android:layout_weight=".95"
+	    	android:orientation="vertical">
+        
+		    <LinearLayout
+		    	android:layout_width="match_parent" 
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal">
+
+		        <com.speedo.NeedleGauge
+			        android:id="@+id/ampGauge"
+			        android:layout_width="0dip"
+			        android:layout_weight=".50"
+			        android:layout_height="wrap_content" />
+
+			    <com.speedo.NeedleGauge
+			        android:id="@+id/rpmGauge"
+			        android:layout_width="0dip"
+			        android:layout_weight=".50"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dip" />
+
+			</LinearLayout>
+
+		    <LinearLayout
+		    	android:layout_width="match_parent" 
+			    android:layout_height="match_parent"
+			    android:orientation="horizontal"
+			    android:gravity="left|bottom">
+
+				<com.jjoe64.graphview.GraphView
+			        android:id="@+id/graph"
+			        android:layout_width="0dip"
+			        android:layout_weight=".80"
+			        android:layout_height="150dip"/>
+			
+		        <LinearLayout
+				    android:layout_height="match_parent"
+			        android:layout_width="0dip"
+			        android:layout_weight=".20"
+			    	android:orientation="vertical"
+			    	android:gravity="center|bottom">
+			    			    
+				    <com.speedo.MotorTempGauge
+				        android:id="@+id/motorTempGauge"
+				        android:layout_width="108dip"
+				        android:layout_height="70dip" />
+				
+				    <com.speedo.ControllerTempGauge
+				        android:id="@+id/controllerTempGauge"
+				        android:layout_width="108dip"
+				        android:layout_height="70dip" />
+
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+        <com.speedo.CapacityGauge
+	        android:id="@+id/capacityGauge"
+	        android:layout_width="0dip"
+	        android:layout_weight=".05"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dip" />
+
+	</LinearLayout>
+        
+</RelativeLayout>
